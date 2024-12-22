@@ -1,0 +1,212 @@
+#headerFixed{
+    height: 100%; 
+    background-color: rgba(170, 151, 74, 1); 
+    display: flex; 
+    position: fixed;
+    /* justify-content: space-between;  */
+    flex-direction: row;
+    transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+
+    ul, li, ol{
+        list-style: none;;
+        margin-left: -0.8rem;
+    }
+}
+
+#hugeBlockForManifests{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#manifestsPage{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left:3.4rem;
+}
+
+#manifestsBlock{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* width: 100%; */
+    /* position: relative;
+    padding-left: 3.4rem; */
+}
+
+#filterBlock{
+    display: flex;
+    /* position: fixed; */
+    /* justify-content: space-between; */
+    flex-direction: row;
+    /* width: 100%; */
+    height: 6rem;
+}
+
+#designFilter{
+    width: 25%; 
+    background-color: rgba(217, 217, 217, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.2vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+    }
+
+    img{
+        width: 20%;
+        /* max-width: 100%; */
+        position: relative;
+        transform: rotate(90deg);
+    }
+}
+
+#cultureFilter{
+    width: 25%; 
+    background-color: rgba(245, 245, 245, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.2vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+        margin-left: -0.3rem;
+    }
+
+    img{
+        width: 20%;
+        /* max-width: 100%; */
+        position: relative;
+        transform: rotate(90deg);
+    }
+}
+
+#architectureFilter{
+    width: 25%; 
+    background-color: rgba(217, 217, 217, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.2vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+    }
+
+    img{
+        width: 15%;
+        position: relative;
+        transform: rotate(90deg);
+    }
+}
+
+
+#artsFilter{
+    width: 25%; 
+    background-color: rgba(245, 245, 245, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.2vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+        margin-left: 0rem;
+    }
+
+    img{
+        width: 20%;
+        position: relative;
+        transform: rotate(90deg) scaleX(-1);
+    }
+}
+
+#designFilter:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#cultureFilter:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#architectureFilter:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+#artsFilter:hover {
+    background-color: rgba(246, 255, 0, 1);
+    transition: 0.8s;
+}
+
+
+.manifestCard {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переходить на следующую строку */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    width: 100%; /* Занимает всю ширину родителя */
+    padding-left: rem;
+    padding-right: 4rem;
+}
+
+#name, #year, #author, #filter {
+    flex: 1; /*Каждый элемент занимает равное пространство */ 
+    text-align: left; /* Текст прижат к левому краю */
+    margin-left: 1rem; /* Отступы для удобства */
+    width: 25%;
+}
+#filter {
+    text-align: right; /* Текст в фильтре прижат к правому краю */
+    margin-right: -1rem;
+}
+.img-txt-container {
+    display: flex; /* Используем flex для img и txt */
+    flex-basis: 100%; /* Занимает всю ширину */
+}
+#img{
+    margin-top: -2%;
+    width: 26.2%;
+    padding: 15px;
+    img{
+        width: 50%;
+    }
+}
+#txt {
+    /* flex: 1; /* Каждый из них занимает равное пространство */ 
+    text-align: left; /* Центрируем текст внутри img и txt */
+    width: 70%;
+    margin-top: -2%;
+    margin-left: 0.4rem;
+    padding-right: 13rem;
+}
