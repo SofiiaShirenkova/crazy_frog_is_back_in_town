@@ -41,12 +41,12 @@
         </div>
 
         <!-- ХЭДЕР МОБИЛЬНЫЙ -->
-        <div id="headerMobile">
+        <div id="headerMobileFixed">
             <div id="logoBox"><img id="logoStyle_phone" src="img/Консерва.webp"></div>
             <div id="list"> <ul>
                     <li>О нас</li>
                     <li>Манифесты
-                    <ol id="ol_list">
+                    <ol id="ol_list" style="display: none;">
                         <li>i. Дизайн</li>
                         <li>ii. Культура</li>
                         <li>iii. Архитектура</li>
@@ -171,7 +171,6 @@ document.getElementById('div_bar').addEventListener('click', toggleMenuManifest)
         const arrow = document.getElementById('arrow');
         const div_menu = document.getElementById('div_menu');
         const manifestsBlock = document.getElementById('manifestsBlock');
-        // const otherDivsFilters = document.querySelectorAll('#designFilter, #cultureFilter, #architectureFilter, #artsFilter');
     
       if (document.documentElement.clientWidth > 414){
         if (div_menu.style.display === 'none') {
@@ -182,7 +181,6 @@ document.getElementById('div_bar').addEventListener('click', toggleMenuManifest)
             arrow.style.transform = 'rotate(180deg)';
             headerFixed.style.width = '20rem';
             manifestsBlock.style.marginLeft = '20rem';
-            // otherDivsFilters.forEach(div => div.style.width = '23%');
         } 
         
         else {
@@ -193,21 +191,10 @@ document.getElementById('div_bar').addEventListener('click', toggleMenuManifest)
             arrow.style.transform = 'rotate(0deg)';
             headerFixed.style.width = '3.5rem';
             manifestsBlock.style.marginLeft = '3.5rem';
-            // otherDivsFilters.forEach(div => div.style.width = '100%');
         }
       }
       
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -236,6 +223,38 @@ document.getElementById('div_bar').addEventListener('click', toggleMenuManifest)
     
     //     }
     
+    document.getElementById('div_bar_phone').addEventListener('click', toggleListManifest)
+    function toggleListManifest(){
+        const ol_list = document.getElementById('ol_list');
+        const arrow_mobile = document.getElementById('arrow_mobile');
+        const headerFixed = document.getElementById('headerFixed');
+        const headerMobileFixed = document.getElementById('headerMobileFixed');
+        const manifestsBlock = document.getElementById('manifestsBlock');
+        const logoStyle_phone = document.getElementById('logoStyle_phone');
+
+        if (document.documentElement.clientWidth <= 414){
+            if(ol_list.style.display === 'none' || ol_list.style.display === ''){
+                headerFixed.style.display = 'none';
+                headerMobileFixed.style.height = '15rem';
+                headerMobileFixed.style.display = 'flex';
+                ol_list.style.display = 'block';
+                arrow_mobile.style.transform = 'rotate(90deg)';
+                manifestsBlock.style.marginTop = '15rem';
+                logoStyle_phone.style.height = '14.5rem';
+                
+            } else {
+                headerFixed.style.display = 'none';
+                headerMobileFixed.style.height = '10rem';
+                headerMobileFixed.style.display = 'flex';
+                ol_list.style.display = 'none';
+                arrow_mobile.style.transform = 'rotate(-90deg)';
+                manifestsBlock.style.marginTop = '10rem';
+                logoStyle_phone.style.height = '10rem';
+            }
+        }
+
+    }
+
 
 </script>
 

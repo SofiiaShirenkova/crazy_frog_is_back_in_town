@@ -25,6 +25,10 @@
     }
 }
 
+#headerMobileFixed{
+    display: none;
+}
+
 #hugeBlockForManifests{
     display: flex;
 }
@@ -205,3 +209,122 @@
 }
 
 
+@media(max-width: 414px){
+    #headerFixed{
+        position: fixed; /* Фиксируем заголовок */
+        top: 0;
+        left: 0;
+        width: 3.5rem;
+        height: 100vh; /* Высота на весь экран */
+        background-color: rgba(170, 151, 74, 1); /* Цвет фона */
+        border-right: 1px solid #ccc; /* Разделительная линия */
+        overflow: auto; /* Прокрутка для меню, если необходимо */
+        z-index: 1000;
+    
+        display: none;
+        flex-direction:row;
+        justify-content:space-between;
+    
+        ul, li, ol{
+            list-style: none;;
+        }
+    
+        ul{
+            margin-left: -1.2rem;
+        }
+        li{
+            margin-left: -0.4rem;
+        }
+    }
+    
+    #headerMobileFixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 5rem; 
+        background-color: rgba(170, 151, 74, 1); 
+        border-right: 1px solid #ccc; 
+        overflow: auto; 
+        z-index: 1000;
+    
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+    
+        ul, li, ol{
+            list-style: none;;
+        }
+    
+        ul{
+            margin-left: -1.2rem;
+        }
+        li{
+            margin-left: -0.4rem;
+        }
+    }
+
+    #manifestsBlock{
+        margin-top: 10rem; 
+        margin-left: 0;
+        padding: 0px; 
+        flex-grow: 1; 
+        height: 100vh; 
+        overflow-y: auto; 
+        background-color: #e9e9e9;
+        font-size: 3vw;
+    }
+    #txt {
+    text-align: left; 
+    margin-top: -2%;
+    margin-left: 1rem;
+    padding-right: 0rem;
+    }
+    #img{
+        img{
+        width: 5rem;
+        padding-right: 0rem;
+        margin-right: 1rem;
+        }
+
+    }
+/* 
+    #logoBox{
+        width: 20%;
+    } */
+
+    #headerMobileFixed{
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        position: fixed;
+        /* flex-direction: row; */
+        background-color: rgba(170, 151, 74, 1);
+        font-size: 5vw;
+    
+        ul{
+            width: 12rem;
+            margin-left: -4%;
+        }
+    }
+    #div_bar_phone {
+        width: 0%;
+        padding-right: 9vw;
+    }
+    
+    #filterBlock{
+        display: flex;
+        flex-direction: row;
+        height: 1.5rem;
+        img{
+            width:1.1rem;
+        }
+    }
+    #filterBlock{
+        display: flex;
+        flex-direction: row;
+        height: 4rem;
+    }
+    
+    
+}
